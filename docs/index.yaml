@@ -1,0 +1,12 @@
+apiVersion: v1
+entries:
+  calc:
+  - apiVersion: v1
+    created: 2018-03-21T13:32:31.028192+08:00
+    description: A Helm chart for Kubernetes
+    digest: 787b37d19145fd0abc4af2ee24d07d756c122941e08e5d3db75a8756030a3678
+    name: calc
+    urls:
+    - https://pek77.github.io/calc/calc-0.1.0.tgz
+    version: 0.1.0
+generated: 2018-03-21T13:32:31.027602+08:00
