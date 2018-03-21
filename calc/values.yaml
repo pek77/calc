@@ -4,18 +4,18 @@
 replicaCount: 1
 image:
   repository: pek77/calc
-  tag: latest
+  tag: "0.1"
   pullPolicy: IfNotPresent
 service:
   name: calc-training
   type: NodePort
+  internalPort: 6001
   externalPort: 6001
 ingress:
   enabled: true
-  # Used to create an Ingress record.
   path: "/calc"
-#  hosts:
-#    - chart-example.local
+  #  hosts:
+  #    - chart-example.local
   annotations:
     ingress.kubernetes.io/add-base-url: "true"
     ingress.kubernetes.io/rewrite-target: "/"
