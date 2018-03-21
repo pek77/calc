@@ -4,7 +4,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ template "name" . }}
+  name: {{ template "name" . }}-ing
   labels:
     app: {{ template "name" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
@@ -21,7 +21,7 @@ spec:
         paths:
           - path: {{ .Values.ingress.path }}
             backend:
-              serviceName: {{ template "name" . }}
+              serviceName: {{ .Values.service.name }}
               servicePort: {{ $servicePort }}
   {{- if .Values.ingress.tls }}
   tls:
